@@ -17,9 +17,9 @@ public class Demo5
 	{
 
 		Config.initialize();
+		//Supprimer : "http://data.semanticweb.org/sparql"
 		Repository repo = FedXFactory.initializeSparqlFederation(Arrays.asList(
-				"http://dbpedia.org/sparql",
-				"http://data.semanticweb.org/sparql"));
+				"http://dbpedia.org/sparql"));
 
 		String q = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
 				+ "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>\n"
