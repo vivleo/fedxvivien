@@ -14,7 +14,7 @@ import com.fluidops.fedx.endpoint.Endpoint;
 
 public class Demo7 {
 
-	
+	@SuppressWarnings("Duplicates")
 	public static void main(String[] args) throws Exception {
 		
 		// the fedx config implicitly defines a dataConfig
@@ -29,8 +29,10 @@ public class Demo7 {
 		String q = "SELECT ?President ?Party WHERE {\n"
 			+ "?President rdf:type dbpedia:President .\n"
 			+ "?President dbpedia:party ?Party . }";
-		
-		TupleQuery query = QueryManager.prepareTupleQuery(q);
+
+		String q2 ="select distinct ?x where {?x a <http://xmlns.com/foaf/0.1/Person>} LIMIT 1000000";
+
+		TupleQuery query = QueryManager.prepareTupleQuery(q2);
 		try (TupleQueryResult res = query.evaluate()) {
 		
 			while (res.hasNext()) {

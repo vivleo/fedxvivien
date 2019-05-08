@@ -7,4 +7,4 @@ boundJoinBlockSize = 15
 
 debugQueryPlan = true
 
-dataConfig = examples/DBpediaSemanticWebDogFood.ttl
+dataConfig = test/local/test.ttl

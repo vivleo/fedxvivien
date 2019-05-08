@@ -222,6 +222,23 @@ public class DisplayDemo extends Application {
                         + "?President rdf:type dbpedia-owl:President .\n"
                         + "?President dbpedia-owl:party ?Party . }";
 
+                /*String q2 = "SELECT distinct *\n" +
+                        "WHERE {\n" +
+                        "{\n" +
+                        "?name dcterms:subject category-de:Haus_Liechtenstein.\n" +
+                        "?name rdf:type foaf:Person.\n" +
+                        "Optional {?name dbpedia-owl:deathDate ?deathDate}\n" +
+                        "}\n" +
+                        "union{\n" +
+                        "SERVICE silent <http://dbpedia.org/sparql>{\n" +
+                        "?name dcterms:subject category-en:Princely_Family_of_Liechtenstein.\n" +
+                        "?name rdf:type foaf:Person.\n" +
+                        "Optional {?name dbpedia-owl:deathDate ?deathDate}\n" +
+                        "}\n" +
+                        "}\n" +
+                        "filter (!bound(?deathDate))\n" +
+                        "}";*/
+
                 TupleQuery query = repo.getConnection().prepareTupleQuery(QueryLanguage.SPARQL, q);
                 try (TupleQueryResult res = query.evaluate()) {
 

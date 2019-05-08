@@ -20,8 +20,3 @@
 	fedx:store "RemoteRepository" ;
 	fedx:repositoryServer "http://10.212.10.29:8088/openrdf-sesame" ;
 	fedx:repositoryName "dbpedia" .
-
-
-
-
-

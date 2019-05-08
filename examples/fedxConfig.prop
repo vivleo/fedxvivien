@@ -4,8 +4,11 @@
 # possible configuration settings
 
 boundJoinBlockSize = 15
-
+enableMonitoring = true
+monitoring.logQueryPlan = true
+monitoring.logQueries = true
 debugQueryPlan = true
+enforceMaxQueryTime = 180
 
 # base directory for local repositories (NativeStore)
-baseDir = C:\\Data\\
+# baseDir = C:\\Data\\
